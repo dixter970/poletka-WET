@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Člověče nezlob se - 8x8</title>
+    <link rel="stylesheet" href="hra.css">
+</head>
+<body>
+    <h1>ČLOVĚČE NEZLOB SE - 8x8</h1>
+    
+    <div class="game-container">
+        <div class="board-container">
+            <div class="game-board" id="gameBoard">
+            </div>
+            <div class="board-note">Herní plán 8x8 podle obrázku</div>
+        </div>
+        
+        <div class="control-panel">
+            <div class="game-status" id="gameStatus"></div>
+            
+            <div class="player-info player-green" id="player1">
+                <div class="player-header">
+                    <span>Hráč 1 (Zelený)</span>
+                    <span class="piece-count">4/4 doma</span>
+                </div>
+                <div class="player-pieces">
+                    <div class="piece piece-green piece-home" data-player="0" data-piece="0">1</div>
+                    <div class="piece piece-green piece-home" data-player="0" data-piece="1">2</div>
+                    <div class="piece piece-green piece-home" data-player="0" data-piece="2">3</div>
+                    <div class="piece piece-green piece-home" data-player="0" data-piece="3">4</div>
+                </div>
+            </div>
+            
+            <div class="player-info player-blue" id="player2">
+                <div class="player-header">
+                    <span>Hráč 2 (Modrý)</span>
+                    <span class="piece-count">4/4 doma</span>
+                </div>
+                <div class="player-pieces">
+                    <div class="piece piece-blue piece-home" data-player="1" data-piece="0">1</div>
+                    <div class="piece piece-blue piece-home" data-player="1" data-piece="1">2</div>
+                    <div class="piece piece-blue piece-home" data-player="1" data-piece="2">3</div>
+                    <div class="piece piece-blue piece-home" data-player="1" data-piece="3">4</div>
+                </div>
+            </div>
+            
+            <div class="player-info player-yellow" id="player3">
+                <div class="player-header">
+                    <span>Hráč 3 (Žlutý)</span>
+                    <span class="piece-count">4/4 doma</span>
+                </div>
+                <div class="player-pieces">
+                    <div class="piece piece-yellow piece-home" data-player="2" data-piece="0">1</div>
+                    <div class="piece piece-yellow piece-home" data-player="2" data-piece="1">2</div>
+                    <div class="piece piece-yellow piece-home" data-player="2" data-piece="2">3</div>
+                    <div class="piece piece-yellow piece-home" data-player="2" data-piece="3">4</div>
+                </div>
+            </div>
+            
+            <div class="player-info player-red" id="player4">
+                <div class="player-header">
+                    <span>Hráč 4 (Červený)</span>
+                    <span class="piece-count">4/4 doma</span>
+                </div>
+                <div class="player-pieces">
+                    <div class="piece piece-red piece-home" data-player="3" data-piece="0">1</div>
+                    <div class="piece piece-red piece-home" data-player="3" data-piece="1">2</div>
+                    <div class="piece piece-red piece-home" data-player="3" data-piece="2">3</div>
+                    <div class="piece piece-red piece-home" data-player="3" data-piece="3">4</div>
+                </div>
+            </div>
+            
+            <div class="dice-container">
+                <div class="dice" id="dice">?</div>
+                <button class="roll-btn" id="rollBtn">HODIT KOSTKOU</button>
+            </div>
+            
+            <div class="game-log">
+                <div class="log-title">Průběh hry:</div>
+                <div id="logMessages"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h3>Pravidla hry (8x8 plocha podle obrázku):</h3>
+        <ul>
+            <li>Každý hráč má 4 figurky ve svém domečku (4x4 kruhy v rozích)</li>
+            <li>Figurka může na hrací plochu pouze po hození 6 - vstoupí na startovní políčko</li>
+            <li>Po hození 6 hráč hází znovu a může posunout figurku nebo vstoupit do hry s další figurkou</li>
+            <li>Figurky se pohybují po hrací dráze (proti směru hodinových ručiček) podle čísel</li>
+            <li>Když hráč stoupne na políčko obsazené soupeřovou figurkou, vyhodí ji a ta se vrací do domečku</li>
+            <li>Figurky musí oběhnout celou dráhu (40 polí) před vstupem do cílové zóny</li>
+            <li>Vyhrává hráč, který první dostane všechny 4 figurky do cílové zóny</li>
+        </ul>
+    </div>
+
+    <script src="hra.js"></script>
+</body>
+</html>
